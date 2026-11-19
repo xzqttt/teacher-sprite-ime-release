@@ -1,0 +1,129 @@
+{
+  "name": "教师精灵输入法",
+  "version": "1.3.2",
+  "version_code": 19,
+  "updated_at": "2026-11-19 15:55:26 +0800",
+  "apk": {
+    "filename": "教师精灵输入法-1.3.2.apk",
+    "asset_name": "teacher-sprite-ime-1.3.2.apk",
+    "bytes": 335110521,
+    "mib": 319.59,
+    "sha256": "151d10e46edec149df15ca87d258da6541c177851b8ad4f7e0bf3afe08dd85e0",
+    "tos_url": "",
+    "github_url": "https://github.com/xzqttt/teacher-sprite-ime-release/releases/download/v1.3.2/teacher-sprite-ime-1.3.2.apk",
+    "mirror_ghfast": "https://ghfast.top/https://github.com/xzqttt/teacher-sprite-ime-release/releases/download/v1.3.2/teacher-sprite-ime-1.3.2.apk",
+    "mirror_ghproxy": "https://gh-proxy.com/https://github.com/xzqttt/teacher-sprite-ime-release/releases/download/v1.3.2/teacher-sprite-ime-1.3.2.apk",
+    "chunks": [
+      {
+        "path": "chunks/part-00",
+        "bytes": 15728640,
+        "sha256": "3eddd023a388d7cbfa2991cd424c258ba7bb6cc384139c7bf404306be60bc1ed"
+      },
+      {
+        "path": "chunks/part-01",
+        "bytes": 15728640,
+        "sha256": "f929b4a34105e7d851cd38d31446645dedb12899d410668c0f69a77529adef34"
+      },
+      {
+        "path": "chunks/part-02",
+        "bytes": 15728640,
+        "sha256": "b73870b0daafda6e4d73d1d1d76486cc7a4cd4aa38197ea7147d481749bfe453"
+      },
+      {
+        "path": "chunks/part-03",
+        "bytes": 15728640,
+        "sha256": "df5c649e53f8efc3e862e22245093e8c943d06aa89d5d4f2646937f699f41ad8"
+      },
+      {
+        "path": "chunks/part-04",
+        "bytes": 15728640,
+        "sha256": "f300ee33b956cf1153cdfb888424fc86df3ea023854a721d28d89d63fefd4d42"
+      },
+      {
+        "path": "chunks/part-05",
+        "bytes": 15728640,
+        "sha256": "655de04482aacd74dde0f71f0f93b5a2d28498165d4af1930c8f161c09b33342"
+      },
+      {
+        "path": "chunks/part-06",
+        "bytes": 15728640,
+        "sha256": "a640e9785212f732bb4bdaed0b598f346ca404035342d8cfe54cf7a2710bfdc2"
+      },
+      {
+        "path": "chunks/part-07",
+        "bytes": 15728640,
+        "sha256": "2388233ea0631964241682fe0d3374dc16a57224d6982200c59f346163cd1c71"
+      },
+      {
+        "path": "chunks/part-08",
+        "bytes": 15728640,
+        "sha256": "63e964abb4b8ca42e2820f3b0e435f0ca57979fc57057523ca61e187b0554af9"
+      },
+      {
+        "path": "chunks/part-09",
+        "bytes": 15728640,
+        "sha256": "27f0eb19e3c8423ae5d7155f83a0c693458c58209f7d4e1141d0956a2ce899d3"
+      },
+      {
+        "path": "chunks/part-10",
+        "bytes": 15728640,
+        "sha256": "c9e8c5aaec6a1bed7743e483c8d03c597147b8d98d15b92adbf44bca7f5e3842"
+      },
+      {
+        "path": "chunks/part-11",
+        "bytes": 15728640,
+        "sha256": "698102ef6160ed1929092e212c28139c74803cdf6c5618105da59be76feceed3"
+      },
+      {
+        "path": "chunks/part-12",
+        "bytes": 15728640,
+        "sha256": "e649024a535bd302e1f5960e2d18b863b17d8175513b2fa74baa6b6ef043960e"
+      },
+      {
+        "path": "chunks/part-13",
+        "bytes": 15728640,
+        "sha256": "4028e16d6ba56771b79dc535c427f9b3e979a1fc127cf0820d21fba2d563075c"
+      },
+      {
+        "path": "chunks/part-14",
+        "bytes": 15728640,
+        "sha256": "ef5992b403e7a7599e41804da915dd3028affb19e321e537fc54ceb0644983ed"
+      },
+      {
+        "path": "chunks/part-15",
+        "bytes": 15728640,
+        "sha256": "3a9254aa5374a3dbae304bb2a80e2b5a30ab9e8e1af6f19a497046d64c700361"
+      },
+      {
+        "path": "chunks/part-16",
+        "bytes": 15728640,
+        "sha256": "01d4c68772d3d582f3a5b099075eff15aebc18bb0c8400881728db0ed918b222"
+      },
+      {
+        "path": "chunks/part-17",
+        "bytes": 15728640,
+        "sha256": "a157a2db38512f26001aa1b5769c4e1342496bc8de71f5e4ad21b6ed947a6869"
+      },
+      {
+        "path": "chunks/part-18",
+        "bytes": 15728640,
+        "sha256": "8e2188b190c03e08aecc44c319b3e098c7ba28649d68790066edcbb405209c8b"
+      },
+      {
+        "path": "chunks/part-19",
+        "bytes": 15728640,
+        "sha256": "a2834bd7c88e15a119c8e8e6878c8d6750154ba4805e45b825962af9d6177a97"
+      },
+      {
+        "path": "chunks/part-20",
+        "bytes": 15728640,
+        "sha256": "6899e77c15b70f521237ea70eb38521215d0d72e7fba059efa6e84309937c3b2"
+      },
+      {
+        "path": "chunks/part-21",
+        "bytes": 4809081,
+        "sha256": "1ac3b99ad989a4c26028791853660d0a708ba7c749c92adc07c626ed71677625"
+      }
+    ]
+  }
+}
