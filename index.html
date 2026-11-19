@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>教师精灵输入法 · Android 官方试用与更新中心</title>
+  <meta name="description" content="教师精灵输入法 Android 官方高速下载中心：支持 8 并发 CDN 分片极速下载、国内镜像直链、最新更新日志与透明评测报告。">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172330;
+      --muted: #526375;
+      --blue: #2563eb;
+      --blue-dark: #1d4ed8;
+      --blue-soft: #eff6ff;
+      --green: #059669;
+      --amber-bg: #fffbeb;
+      --amber-border: #f59e0b;
+      --line: #e2e8f0;
+      --card: #f8fafc;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #f1f5f9;
+      color: var(--ink);
+      font: 1rem/1.65 -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    }
+    main {
+      width: min(100%, 54rem);
+      margin: 1.5rem auto;
+      padding: clamp(1.15rem, 4.5vw, 2.75rem);
+      background: #ffffff;
+      border-top: .32rem solid var(--blue);
+      border-radius: .9rem;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, .06);
+    }
+    h1, h2, h3, p, dl, ol, ul { margin: 0; }
+    h1 { font-size: clamp(1.75rem, 4.6vw, 2.45rem); line-height: 1.22; letter-spacing: -.02em; }
+    h2 { font-size: 1.3rem; line-height: 1.38; display: flex; align-items: center; gap: .45rem; }
+    h3 { font-size: 1rem; }
+    a { color: var(--blue); text-underline-offset: .2em; }
+    .wechat-tip {
+      display: none;
+      margin-bottom: 1rem;
+      padding: .75rem 1rem;
+      background: var(--amber-bg);
+      border: 1px solid var(--amber-border);
+      border-radius: .6rem;
+      color: #92400e;
+      font-size: .92rem;
+      font-weight: 600;
+    }
+    .badge-row { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin-bottom: .55rem; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: .18rem .65rem;
+      border-radius: 999px;
+      background: var(--blue-soft);
+      color: var(--blue-dark);
+      font-size: .82rem;
+      font-weight: 650;
+    }
+    .pill.green { background: #ecfdf5; color: var(--green); }
+    header > p { margin-top: .6rem; color: var(--muted); }
+    .dl-panel {
+      margin-top: 1.25rem;
+      padding: 1.15rem;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: .75rem;
+    }
+    .dl-grid { display: flex; flex-wrap: wrap; gap: .65rem; align-items: center; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .4rem;
+      padding: .72rem 1.25rem;
+      border: 1px solid transparent;
+      border-radius: .55rem;
+      font: inherit;
+      font-size: .95rem;
+      font-weight: 650;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background .15s, transform .08s;
+    }
+    .btn:active { transform: scale(.99); }
+    .btn-primary { background: var(--blue); color: #fff; }
+    .btn-primary:hover { background: var(--blue-dark); }
+    .btn-primary:disabled { opacity: .65; cursor: wait; }
+    .btn-secondary { background: #fff; color: var(--ink); border-color: #cbd5e1; }
+    .btn-secondary:hover { background: #f1f5f9; }
+    .latency { font-size: .76rem; color: var(--green); font-weight: 600; }
+    .progress-wrap { display: none; margin-top: .85rem; }
+    .progress-bar-bg {
+      width: 100%;
+      height: .6rem;
+      background: #e2e8f0;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .progress-bar-fill {
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--blue), #06b6d4);
+      transition: width .15s linear;
+    }
+    .progress-text { margin-top: .4rem; font-size: .84rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+    .meta-line { margin-top: .75rem; font-size: .82rem; color: var(--muted); word-break: break-all; }
+    .nav-links { display: flex; flex-wrap: wrap; gap: .5rem 1.1rem; margin-top: .95rem; font-size: .9rem; }
+    section { margin-top: 1.85rem; padding-top: 1.55rem; border-top: 1px solid var(--line); }
+    .note { margin-top: .65rem; font-size: .88rem; color: var(--muted); }
+    .features { margin-top: .85rem; display: grid; gap: .65rem; }
+    .feat-card {
+      padding: .85rem 1rem;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: .6rem;
+    }
+    .feat-card dt { font-weight: 700; color: #0f172a; margin-bottom: .2rem; }
+    .feat-card dd { margin: 0; font-size: .94rem; color: #334155; }
+    .audit-box {
+      margin-top: .9rem;
+      padding: 1rem 1.1rem;
+      background: #fffbeb;
+      border-left: 4px solid var(--amber-border);
+      border-radius: .45rem;
+      font-size: .92rem;
+    }
+    .audit-box ul { margin-top: .45rem; padding-left: 1.25rem; }
+    .audit-box li + li { margin-top: .25rem; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-variant-numeric: tabular-nums; font-size: .92rem; }
+    th, td { padding: .55rem .6rem; text-align: right; border-bottom: 1px solid var(--line); }
+    th:first-child, td:first-child { text-align: left; }
+    thead th { background: #f1f5f9; font-weight: 650; }
+    .comparison :is(th, td):nth-child(2) { background: var(--blue-soft); color: #1e3a8a; font-weight: 700; }
+    .hits { display: block; color: var(--muted); font-size: .76rem; font-weight: 400; }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1px;
+      margin-top: 1rem;
+      border: 1px solid var(--line);
+      border-radius: .6rem;
+      overflow: hidden;
+      background: var(--line);
+    }
+    .stats > div { padding: .85rem; background: var(--card); }
+    .stats dt { font-size: .82rem; color: var(--muted); }
+    .stats dd { margin: .18rem 0 0; font-size: clamp(1.18rem, 3.2vw, 1.5rem); font-weight: 700; }
+    ol { margin-top: .65rem; padding-left: 1.4rem; }
+    ol li + li { margin-top: .3rem; }
+    code { padding: .1rem .32rem; border-radius: .25rem; background: #e2e8f0; color: #0f172a; font: .9em ui-monospace, SFMono-Regular, monospace; }
+    @media (max-width: 40rem) {
+      main { margin: 0 auto; border-radius: 0; }
+      th, td { padding: .45rem .3rem; font-size: .84rem; }
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div id="wechat-tip" class="wechat-tip">
+      💡 检测到当前在微信内打开：请点击右上角「···」选择「在默认浏览器中打开」，即可满速下载安装 APK。
+    </div>
+
+    <header>
+      <div class="badge-row">
+        <span class="pill" id="ver-pill">v1.2.0 正式试用版</span>
+        <span class="pill green">Android 8.0+ / 鸿蒙真机即装即用</span>
+        <span class="pill" id="date-pill">2026-11-19 更新</span>
+      </div>
+      <h1>教师精灵输入法</h1>
+      <p>专为新东方教师与高效中文输入打造：支持 26 键/九键智能整句、新东方快捷评语面板、Typeless 风格离线语音整理、中英混输与百万级多学科词库。</p>
+
+      <div class="dl-panel">
+        <div class="dl-grid">
+          <button type="button" class="btn btn-primary" id="turbo-btn">
+            ⚡ 多线程极速下载真机版 (<span id="arm64-size">138.2</span> MiB)
+          </button>
+          <a class="btn btn-secondary" id="mirror-link" href="教师精灵输入法-1.2.0-arm64.apk" download>
+            🚀 国内加速直链 <span class="latency" id="mirror-ping"></span>
+          </a>
+          <a class="btn btn-secondary" id="direct-link" href="教师精灵输入法-1.2.0-arm64.apk" download>
+            🌐 GitHub 官方直连 <span class="latency" id="direct-ping"></span>
+          </a>
+        </div>
+
+        <div class="progress-wrap" id="progress-wrap">
+          <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-fill"></div></div>
+          <div class="progress-text" id="progress-text">正在初始化 8 并发高速通道…</div>
+        </div>
+
+        <p class="meta-line">
+          推荐所有安卓/鸿蒙手机下载 <strong>arm64 真机精简版</strong>（剔除 x86 模拟器冗余库，立省约 24 MiB，覆盖旧版无需卸载）。
+          如需电脑模拟器通用包（<span id="full-size">160.96</span> MiB）：<a id="full-link" href="教师精灵输入法-1.2.0.apk" download>点此下载全架构通用版</a>。<br>
+          SHA-256 (arm64)：<code id="arm64-sha">加载校验码…</code>
+        </p>
+      </div>
+
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="#changes">✨ 1.2.0 最新更新内容</a>
+        <a href="#quality">📊 真实评测与豆包对比复盘</a>
+        <a href="#dictionary">📚 词库与联想规模</a>
+        <a href="#install">📲 三步安装指南</a>
+      </nav>
+    </header>
+
+    <section aria-labelledby="changes">
+      <h2 id="changes">✨ v1.2.0 核心更新内容（2026-11-19）</h2>
+      <dl class="features">
+        <div class="feat-card">
+          <dt>1. 新东方教师专属「评语/常用语」一键面板</dt>
+          <dd>顶部菜单栏新增「评语」入口，内置<strong>课堂夸奖、作业批改、家校通知、英语/学科指导</strong>四大高频分类模板，并支持将刚复制的文本一键永久收藏为个人常用语，老师写反馈、发群通知点一下即上屏。</dd>
+        </div>
+        <div class="feat-card">
+          <dt>2. Typeless 风格离线智能语音输入（秒开 + 口语改口自动纠错）</dt>
+          <dd>重构语音引擎后台常驻预热与自适应多核推理，修复无固定 ID 输入框权限返回与重连中断问题；新增 7 柱实时声波纹、口头禅净化、<strong>通用口语改口自我纠错</strong>（例如说出“星期三不对星期四开会”自动净化为“星期四开会”）、“第一项/第二项”自动分点排版、“看原话 / 看整理稿”一键切换及「✓ 说完上屏」极速直出。</dd>
+        </div>
+        <div class="feat-card">
+          <dt>3. 中文模式下英文单词直出 &amp; 大写盲打（PPT / KET / teacher）</dt>
+          <dd>无需切换英文键盘，在中文 26 键或九键下输入 <code>teacher</code>、<code>hello</code>、<code>apple</code>、<code>chatgpt</code> 等自动在候选栏前置展示英文单词；未打字时左下角保留 <code>⇧</code> 大写键，支持中文模式下直接盲打 <code>PPT</code>、<code>PDF</code>、<code>KET</code>、<code>TOEFL</code>。</dd>
+        </div>
+        <div class="feat-card">
+          <dt>4. 智能动态「分词 '」键 &amp; 拼音区实时光标编辑</dt>
+          <dd>未输入拼音时不展示令人困惑的静态分词键；开始输入后，26 键左下角与九键 <code>1</code> 键动态切换为醒目的蓝色 <code>分词 '</code> 键（如输入 <code>xi</code> 点分词再输 <code>an</code> 精准锁定“西安”）。点击拼音区可逐字母移动光标增删，<strong>下方候选词全程实时刷新可见、随时点选</strong>；彻底修复单音节纠错篡改拼音回显（输入 <code>zai</code> 忠实显示 <code>zai</code>）。</dd>
+        </div>
+        <div class="feat-card">
+          <dt>5. 多源优质词库大扩充 &amp; 上下文联想命中率提升 4.3 倍</dt>
+          <dd>合入新东方全学科教学词库（421 条）、清华开放词库 + 万象古诗词/化学/生物/历史名人/地理多学科词库（19,596 条）及 4,969 条高频多音字词组；升级通用+口语双域融合解码与 8M Transformer 31 维神经精排；可触发联想前词扩充至 <strong>154,086</strong> 个（479,709 条搭配），LCCC 公开测试集下一词预测 Top-1 命中从 2,136 跃升至 <strong>9,194</strong>。</dd>
+        </div>
+        <div class="feat-card">
+          <dt>6. 随打随现丰富表情 + 全局深浅色同步 + 面板底栏修复</dt>
+          <dd>5,689 个情绪、热词与课堂表扬关键词关联 1,947 种 Emoji 与颜文字，候选栏右侧双表情即点即用；精简顶栏与键盘重合按钮；切换浅色/深色皮肤时顶栏、候选区、语音面板 100% 同步换色；修复剪贴板与符号面板底部按钮高度拉伸问题。</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section aria-labelledby="quality">
+      <h2 id="quality">📊 三款输入法真实评测与豆包对比透明复盘</h2>
+      <div class="audit-box">
+        <strong>🔍 为什么此前 v5 评测中豆包输入法综合命中率仅显示 39.83%？（复盘核查结论）</strong>
+        <ul>
+          <li><strong>隐私弹窗点“拒绝”导致退化为基础离线模式：</strong>旧自动化脚本（<code>setupdb.py</code>）在豆包首次启动时自动点击了「拒绝」协议并在飞行模式下运行，导致豆包云端大模型联想、云端纠错与在线整句排序全部关闭，仅剩基础本地兜底词表。</li>
+          <li><strong>1ms 极速按键与 65ms 截断：</strong>旧回放器每键仅间隔 1ms、末键 65ms 即抓取屏幕，截断了异步候选重排。</li>
+          <li><strong>绝对中心像素点击：</strong>脚本固定点击按键几何中心，使豆包依赖真实手指偏移分布的触控热力图纠错无法触发。</li>
+          <li><strong>60% 人工规则错输放大离线劣势：</strong>其实即使在受限离线态下，豆包在 v5 正常输入全键（87.25%）与九键（71.13%）依然很强，仅仅因为 2,400 条人工规则错输在基础离线模式下仅命中 8.21%，才把总分拉低到 39.83%。</li>
+        </ul>
+      </div>
+      <p class="note">为此，我们在下方同时列出 <strong>豆包 1.5.6 开启联网智能模式（55ms/键 + 1250ms 等待云端返回）</strong> 在完全未见过的公开日常对话集上的真实成绩，以及 v5（4,000 条）同口径实测成绩，做到完全客观透明：</p>
+
+      <table class="comparison" aria-labelledby="quality">
+        <thead>
+          <tr>
+            <th scope="col">评测集与输入条件（首选命中率）</th>
+            <th scope="col">教师精灵 1.2.0</th>
+            <th scope="col">豆包 1.5.6</th>
+            <th scope="col">新东方 SDK</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">公开独立对话 A（400条 · 豆包联网智能模式 · 全键）</th>
+            <td id="c-u400-26">60.00%<span class="hits">240 / 400</span></td>
+            <td>57.25%<span class="hits">229 / 400</span></td>
+            <td>31.25%<span class="hits">125 / 400</span></td>
+          </tr>
+          <tr>
+            <th scope="row">公开独立对话 A（400条 · 豆包联网智能模式 · 九键）</th>
+            <td id="c-u400-9">37.75%<span class="hits">151 / 400</span></td>
+            <td>28.75%<span class="hits">115 / 400</span></td>
+            <td>16.25%<span class="hits">65 / 400</span></td>
+          </tr>
+          <tr>
+            <th scope="row">公开独立对话 B（400条 · 豆包联网智能模式 · 全键）</th>
+            <td id="c-r400-26">59.25%<span class="hits">237 / 400</span></td>
+            <td>41.25%<span class="hits">165 / 400</span></td>
+            <td>30.25%<span class="hits">121 / 400</span></td>
+          </tr>
+          <tr>
+            <th scope="row">公开独立对话 B（400条 · 豆包联网智能模式 · 九键）</th>
+            <td id="c-r400-9">35.00%<span class="hits">140 / 400</span></td>
+            <td>29.50%<span class="hits">118 / 400</span></td>
+            <td>15.50%<span class="hits">62 / 400</span></td>
+          </tr>
+          <tr>
+            <th scope="row">纯正常未扰动口语对话（480条 · 豆包联网云端 · 全键）</th>
+            <td id="c-n480-26">63.96%<span class="hits">307 / 480</span></td>
+            <td>70.00%<span class="hits">336 / 480</span></td>
+            <td>44.17%<span class="hits">212 / 480</span></td>
+          </tr>
+          <tr>
+            <th scope="row">纯正常未扰动口语对话（480条 · 豆包联网云端 · 九键）</th>
+            <td id="c-n480-9">41.46%<span class="hits">199 / 480</span></td>
+            <td>49.58%<span class="hits">238 / 480</span></td>
+            <td>30.00%<span class="hits">144 / 480</span></td>
+          </tr>
+          <tr>
+            <th scope="row">v5 综合评测（4,000条 · 离线 · 全键）</th>
+            <td id="c-v5-26">82.73%<span class="hits">3,309 / 4,000</span></td>
+            <td>39.83%<span class="hits">1,593 / 4,000 (离线受限)</span></td>
+            <td>60.03%<span class="hits">2,401 / 4,000</span></td>
+          </tr>
+          <tr>
+            <th scope="row">v5 综合评测（4,000条 · 离线 · 九键）</th>
+            <td id="c-v5-9">51.00%<span class="hits">2,040 / 4,000</span></td>
+            <td>31.78%<span class="hits">1,271 / 4,000 (离线受限)</span></td>
+            <td>33.80%<span class="hits">1,352 / 4,000</span></td>
+          </tr>
+          <tr>
+            <th scope="row">v5 正常输入分项（1,600条 · 离线 · 全键）</th>
+            <td id="c-v5n-26">89.25%<span class="hits">1,428 / 1,600</span></td>
+            <td>87.25%<span class="hits">1,396 / 1,600</span></td>
+            <td>79.50%<span class="hits">1,272 / 1,600</span></td>
+          </tr>
+          <tr>
+            <th scope="row">v5 正常输入分项（1,600条 · 离线 · 九键）</th>
+            <td id="c-v5n-9">69.50%<span class="hits">1,112 / 1,600</span></td>
+            <td>71.13%<span class="hits">1,138 / 1,600</span></td>
+            <td>59.56%<span class="hits">953 / 1,600</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="note">注：教师精灵全程 100% 纯本机离线运行（零云端上传隐私风险），每键候选响应中位数仅 2.2ms（全键）/ 4.4ms（九键），在含真实拼写容错的公开独立对话 A/B（共 800 条）中，全键与九键首选命中率均已超过开启联网的豆包 1.5.6；在纯无错网络口语长句上，豆包依托云端百亿参数大模型仍具一定云端优势。</p>
+    </section>
+
+    <section aria-labelledby="dictionary">
+      <h2 id="dictionary">📚 内置离线词库与模型规模</h2>
+      <dl class="stats">
+        <div><dt>全拼词条</dt><dd>912,043</dd></div>
+        <div><dt>简拼词条</dt><dd>231,438</dd></div>
+        <div><dt>N-gram 解码词表</dt><dd>1,258,164</dd></div>
+        <div><dt>新东方与多学科专词</dt><dd>20,017</dd></div>
+        <div><dt>可触发联想前词</dt><dd>154,086</dd></div>
+        <div><dt>英文单词与缩写</dt><dd>71,984</dd></div>
+      </dl>
+      <p class="note">含 421 条新东方及 K12 教研核心词、19,596 条清华与万象多学科/古诗词/理化生词条、4,969 条精校多音字短语、479,709 条前后词联想边，以及 5,689 个表情触发词（覆盖 1,947 种表情）。</p>
+    </section>
+
+    <section aria-labelledby="install">
+      <h2 id="install">📲 三步快速安装与启用</h2>
+      <ol>
+        <li>点击页面上方 <strong>「⚡ 多线程极速下载真机版」</strong>（或任一直链），下载完成后点击安装（已安装旧版的同事可直接覆盖升级，个人词库自动保留）。</li>
+        <li>打开桌面上的「教师精灵输入法」，点击<strong>第 1 步</strong>在系统输入法管理中勾选启用。</li>
+        <li>返回应用点击<strong>第 2 步</strong>切换当前输入法为「教师精灵输入法」，即可在下方输入框或微信、飞书、备课软件中畅快使用！</li>
+      </ol>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      if (/MicroMessenger/i.test(navigator.userAgent)) {
+        document.getElementById('wechat-tip').style.display = 'block';
+      }
+
+      const turboBtn = document.getElementById('turbo-btn');
+      const mirrorLink = document.getElementById('mirror-link');
+      const directLink = document.getElementById('direct-link');
+      const fullLink = document.getElementById('full-link');
+      const progressWrap = document.getElementById('progress-wrap');
+      const progressFill = document.getElementById('progress-fill');
+      const progressText = document.getElementById('progress-text');
+
+      let manifestData = null;
+
+      async function probeLatency(url, badgeEl) {
+        const start = performance.now();
+        try {
+          const ctrl = new AbortController();
+          const timer = setTimeout(() => ctrl.abort(), 4500);
+          await fetch(url, { method: 'HEAD', mode: 'no-cors', cache: 'no-store', signal: ctrl.signal });
+          clearTimeout(timer);
+          const ms = Math.round(performance.now() - start);
+          badgeEl.textContent = ms + 'ms';
+        } catch (_) {
+          badgeEl.textContent = '';
+        }
+      }
+
+      async function sha256Hex(buffer) {
+        const digest = await crypto.subtle.digest('SHA-256', buffer);
+        return Array.from(new Uint8Array(digest)).map(b => b.toString(16).padStart(2, '0')).join('');
+      }
+
+      fetch('manifest.json?t=' + Date.now(), { cache: 'no-store' })
+        .then(r => r.ok ? r.json() : null)
+        .then(data => {
+          if (!data) return;
+          manifestData = data;
+          document.getElementById('ver-pill').textContent = 'v' + data.version + ' 正式试用版';
+          document.getElementById('date-pill').textContent = data.updated_at.slice(0, 16) + ' 更新';
+          document.getElementById('arm64-size').textContent = data.arm64.mib.toFixed(1);
+          document.getElementById('full-size').textContent = data.universal.mib.toFixed(1);
+          document.getElementById('arm64-sha').textContent = data.arm64.sha256;
+
+          mirrorLink.href = data.arm64.mirror_ghfast;
+          directLink.href = data.arm64.github_url;
+          fullLink.href = data.universal.mirror_ghfast || data.universal.github_url;
+
+          probeLatency(data.arm64.mirror_ghfast, document.getElementById('mirror-ping'));
+          probeLatency(data.arm64.github_url, document.getElementById('direct-ping'));
+        })
+        .catch(() => {});
+
+      turboBtn.addEventListener('click', async function () {
+        if (!manifestData || !manifestData.arm64 || !manifestData.arm64.chunks || !manifestData.arm64.chunks.length) {
+          window.location.href = mirrorLink.href;
+          return;
+        }
+        const info = manifestData.arm64;
+        const chunks = info.chunks;
+        const results = new Array(chunks.length);
+        const loadedPerChunk = new Array(chunks.length).fill(0);
+        const totalBytes = info.bytes;
+        const startedAt = performance.now();
+
+        turboBtn.disabled = true;
+        progressWrap.style.display = 'block';
+
+        function renderProgress(extra) {
+          const done = loadedPerChunk.reduce((a, b) => a + b, 0);
+          const pct = Math.min(100, (done * 100) / totalBytes);
+          const sec = Math.max(0.1, (performance.now() - startedAt) / 1000);
+          const speed = (done / 1048576) / sec;
+          progressFill.style.width = pct.toFixed(1) + '%';
+          progressText.textContent = extra || (
+            '已下载 ' + (done / 1048576).toFixed(1) + ' / ' + (totalBytes / 1048576).toFixed(1) +
+            ' MiB (' + pct.toFixed(0) + '%) · 速度 ' + speed.toFixed(2) + ' MiB/s'
+          );
+        }
+
+        let cursor = 0;
+        async function worker() {
+          while (cursor < chunks.length) {
+            const idx = cursor++;
+            const meta = chunks[idx];
+            let attempt = 0;
+            while (true) {
+              attempt++;
+              try {
+                const resp = await fetch(meta.path, { cache: 'force-cache' });
+                if (!resp.ok) throw new Error('HTTP ' + resp.status);
+                const reader = resp.body && resp.body.getReader ? resp.body.getReader() : null;
+                let buf;
+                if (reader) {
+                  const parts = [];
+                  let rec = 0;
+                  while (true) {
+                    const step = await reader.read();
+                    if (step.done) break;
+                    parts.push(step.value);
+                    rec += step.value.byteLength;
+                    loadedPerChunk[idx] = rec;
+                    renderProgress();
+                  }
+                  const merged = new Uint8Array(rec);
+                  let off = 0;
+                  for (const p of parts) { merged.set(p, off); off += p.byteLength; }
+                  buf = merged.buffer;
+                } else {
+                  buf = await resp.arrayBuffer();
+                  loadedPerChunk[idx] = buf.byteLength;
+                  renderProgress();
+                }
+                if (crypto && crypto.subtle && meta.sha256) {
+                  const hex = await sha256Hex(buf);
+                  if (hex !== meta.sha256) throw new Error('分片校验不匹配');
+                }
+                results[idx] = buf;
+                break;
+              } catch (err) {
+                if (attempt >= 3) throw err;
+                await new Promise(r => setTimeout(r, 400 * attempt));
+              }
+            }
+          }
+        }
+
+        try {
+          const concurrency = Math.min(8, chunks.length);
+          const pool = [];
+          for (let w = 0; w < concurrency; w++) pool.push(worker());
+          await Promise.all(pool);
+          renderProgress('✅ 分片校验全部通过，正在保存安装包…');
+          const blob = new Blob(results, { type: 'application/vnd.android.package-archive' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = info.filename;
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+          setTimeout(() => URL.revokeObjectURL(url), 60000);
+          progressText.textContent = '🎉 下载完成！请在浏览器下载栏点击「' + info.filename + '」安装。';
+        } catch (err) {
+          progressText.textContent = '⚠️ 多线程通道受限，已自动为您切换至国内加速直链下载…';
+          window.location.href = mirrorLink.href;
+        } finally {
+          turboBtn.disabled = false;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
