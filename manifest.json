@@ -1,0 +1,65 @@
+{
+  "name": "教师精灵输入法",
+  "version": "1.6.9",
+  "version_code": 31,
+  "updated_at": "2026-11-20 07:46:43 +0800",
+  "apk": {
+    "filename": "教师精灵输入法-1.6.9.apk",
+    "asset_name": "teacher-sprite-ime-1.6.9.apk",
+    "bytes": 132054887,
+    "mib": 125.94,
+    "sha256": "22a51784aa712be76155045bb8505c1b57a70198fbb9405f2cc757de00417d7c",
+    "tos_url": "",
+    "tos_cdn": true,
+    "github_url": "https://github.com/xzqttt/teacher-sprite-ime-release/releases/download/v1.6.9/teacher-sprite-ime-1.6.9.apk",
+    "mirror_ghfast": "https://ghfast.top/https://github.com/xzqttt/teacher-sprite-ime-release/releases/download/v1.6.9/teacher-sprite-ime-1.6.9.apk",
+    "mirror_ghproxy": "https://gh-proxy.com/https://github.com/xzqttt/teacher-sprite-ime-release/releases/download/v1.6.9/teacher-sprite-ime-1.6.9.apk",
+    "chunks": [
+      {
+        "path": "https://ark-auto-2102112654-cn-beijing-default.tos-cn-beijing.volces.com/xdf-tpa-ime/releases/v1.6.9/part-00.bin",
+        "bytes": 15728640,
+        "sha256": "e43fda3137141f0ae9c71d336ebb98e11951e7236a5e64505010f76277557b3c"
+      },
+      {
+        "path": "https://ark-auto-2102112654-cn-beijing-default.tos-cn-beijing.volces.com/xdf-tpa-ime/releases/v1.6.9/part-01.bin",
+        "bytes": 15728640,
+        "sha256": "77a62cca658d662a7e5abd5a868d19a9153e5002e26e884e6d918dffb59df5ba"
+      },
+      {
+        "path": "https://ark-auto-2102112654-cn-beijing-default.tos-cn-beijing.volces.com/xdf-tpa-ime/releases/v1.6.9/part-02.bin",
+        "bytes": 15728640,
+        "sha256": "d4ab545049c1141fdcbb014b922cd68c07266575f032788577284b39692567ca"
+      },
+      {
+        "path": "https://ark-auto-2102112654-cn-beijing-default.tos-cn-beijing.volces.com/xdf-tpa-ime/releases/v1.6.9/part-03.bin",
+        "bytes": 15728640,
+        "sha256": "3578daf18cb089567b7fe7dcc14455c290c4143be7047e77889f477419da5fed"
+      },
+      {
+        "path": "https://ark-auto-2102112654-cn-beijing-default.tos-cn-beijing.volces.com/xdf-tpa-ime/releases/v1.6.9/part-04.bin",
+        "bytes": 15728640,
+        "sha256": "f728fc22b72585c97c86c39b588350ed033fe7b0e35b124345678ac87b3eff85"
+      },
+      {
+        "path": "https://ark-auto-2102112654-cn-beijing-default.tos-cn-beijing.volces.com/xdf-tpa-ime/releases/v1.6.9/part-05.bin",
+        "bytes": 15728640,
+        "sha256": "5e3a269027044aa902407e6ff3ec904e4cc07a3e28e808bccee7cf817338a457"
+      },
+      {
+        "path": "https://ark-auto-2102112654-cn-beijing-default.tos-cn-beijing.volces.com/xdf-tpa-ime/releases/v1.6.9/part-06.bin",
+        "bytes": 15728640,
+        "sha256": "7005707c8c7fce011de8464296936c2a43b4d2281df40a4ee5f1c7b9b564f3aa"
+      },
+      {
+        "path": "https://ark-auto-2102112654-cn-beijing-default.tos-cn-beijing.volces.com/xdf-tpa-ime/releases/v1.6.9/part-07.bin",
+        "bytes": 15728640,
+        "sha256": "bca6c3f8c87a7cf7e9394fe7c8243b3dd9acc782b4d84146a7e114a2b7b0cf04"
+      },
+      {
+        "path": "https://ark-auto-2102112654-cn-beijing-default.tos-cn-beijing.volces.com/xdf-tpa-ime/releases/v1.6.9/part-08.bin",
+        "bytes": 6225767,
+        "sha256": "329546739a8c52202833ae0a9388469b948088445d45e6fcaa25a94f61c45720"
+      }
+    ]
+  }
+}
